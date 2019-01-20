@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Cryptic Trend</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="./bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="./sb-admin-2.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <!--<link href="./font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+
+
+    <link href="./styles.css" rel="stylesheet">
+
+    <!-- <script src="./statsMaker.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script> -->
+    
+    <!-- jQuery -->
+    <script src="./jquery.min.js"></script>
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="./icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16x16.png">
+    <link rel="manifest" href="./icons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./icons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <style>
+      canvas{
+          -moz-user-select: none;
+          -webkit-user-select: none;
+          -ms-user-select: none;
+      }
+          
+      .row-no-padding {
+        [class*="col-"] {
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+        }
+      }
+        
+    </style>
+    
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+        
+        <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="background-color:#FFA500">
+        <div class="container" style="color:darkblue";>
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <img src="headerLogo.png" alt="logo" width = 15%>
+                </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse pull-right" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="index1.html" style="color: rgb(255,255,255); font-size: 15px"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="options.html" style="color: rgb(255,255,255); font-size: 15px"><i class="fa fa-bar-chart-o fa-fw"></i>Options<span class="fa arrow"></span></a>
+                    </li>
+                    <li>
+                        <a href="#" style="color: rgb(255,255,255); font-size: 15px"><i class="fa fa-table fa-fw"></i>Raw Data</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+        
+        
+        
+        <!-- Navigation -->    
+
+            
+            
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header"></h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-primary">
+                        <div style="background-color: #2157a7; border-color: #2157a7" class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3 text-right">
+                                    <i class="fa  fa-user-secret  fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge" id="socialCorrIndex">0.69</div>
+                                    <div>Privacy Aggression</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-green">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3 text-right">
+                                    <i class="fa  fa-cookie-bite  fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge" id="cacheSize">200</div>
+                                    <div>Size of Cache (in MB)</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-yellow">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa  fa-ban   fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge" id="trendingTweetsCounter">532</div>
+                                    <div>Webpages Blocked</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-red">
+                        <div style="background-color: #d62027; border-color: #d62027" class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa  fa-fingerprint   fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                        <div style="margin-top: 6px"></div>
+                                    <div class="medium" id="prominentDomain">3673</div>
+                                    <div style="margin-top: 10px"></div>
+                                    <div>Most Prominent Domain</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-bar-chart-o fa-fw"></i> Files Removed Over Time
+                            <!-- <div class="pull-right">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                                        Select Currency
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu pull-right" role="menu">
+                                        <li><a href="#">Bitcoin</a>
+                                        </li>
+                                        <li><a href="#">Litcoin</a>
+                                        </li>
+                                        <li><a href="#">Ethereum</a>
+                                        </li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Remove all filters</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div> -->
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div style="width:100%;">
+                              <canvas id="myChart" height=300></canvas>
+                          </div>
+                        <!-- /.panel-body -->
+                    </div>
+                
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-8 -->
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-bar-chart-o fa-fw"></i> Cookies Removed From Each Domain
+                            <!-- <div class="pull-right">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                                        Select Currency
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu pull-right" role="menu">
+                                        <li><a href="#">Bitcoin</a>
+                                        </li>
+                                        <li><a href="#">Litcoin</a>
+                                        </li>
+                                        <li><a href="#">Ethereum</a>
+                                        </li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Remove all filters</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div> -->
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div style="width:100%;">
+                              <canvas id="myChart2" height=></canvas>
+                          </div>
+                        <!-- /.panel-body -->
+                    </div>
+                
+                    <!-- /.panel -->
+                </div>
+
+                <!-- <div class="col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-bell fa-fw"></i> Chart Filters
+                            <div class="pull-right">
+                                
+                                <div class="btn-group">
+                                <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                                Select Filters
+                                <span class="caret"></span>
+                                </button>
+                                
+                                <ul class="dropdown-menu pull-right" role="menu" >
+                                    <li class="active" id ="weights-dropdown"><a href="#weights-menu" data-toggle="tab">Indexes / Weights</a>
+                                    </li>
+                                    <li><a href="#filter-menu" data-toggle="tab">Filters</a>
+                                    </li>
+                                </ul>
+                                </div>
+                            </div> -->
+                                
+                            <!-- <script>
+                                $(".dropdown-menu").on("click", function(){
+                                  $(".dropdown-menu").find(".active").removeClass("active");
+                                  $(this).parent().addClass("active");
+                                });
+                                </script>     -->
+                                
+                                <!--
+                                <ul class="nav nav-tabs">
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Select Filters
+                                        <span class="caret"></span></a>
+                                        <ul class="dropdown-menu pull-right" role="menu" >
+                                            <li><a href="#weights-menu" data-toggle="tab">Indexes / Weights</a>
+                                            </li>
+                                            <li><a href="#filter-menu" data-toggle="tab">Filters</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    
+                                </ul>
+-->
+                                
+                                <!-- /.panel-heading -->
+                        <!-- <div class="panel-body">
+                            <div class="tab-content">
+                            <div id="weights-menu" class="tab-pane fade in active">
+                            <div class="list-group" >
+                                <div class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-4" style="padding-right: 0 !important;">
+                                            <div class="form-group">
+                                                <input type="number" class="form-control" id="tweet_coeff1" onchange=reviseCoefficient() step="0.1">
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4 text-center" style="padding-left: 0 !important;padding-right: 0 !important;">
+                                            <div class="small text-muted"> x Tweets ^</div>
+                                        </div>
+                                        <div class="col-xs-4" style="padding-left: 0 !important;">
+                                            <div class="form-group">
+                                                <input type="number" class="form-control" id="tweet_coeff2" onchange=reviseCoefficient() step="0.1" >
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> -->
+                                <!-- <div class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-4" style="padding-right: 0 !important;">
+                                            <div class="form-group">
+                                                <input type="number" class="form-control" id="fav_coeff1" onchange=reviseCoefficient() step="0.1" >
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4 text-center" style="padding-left: 0 !important;padding-right: 0 !important;">
+                                            <div class="small"> x Favourites ^</div>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <div class="form-group" style="padding-left: 0 !important;">
+                                                <input type="number" class="form-control" id="fav_coeff2" onchange=reviseCoefficient() step="0.1" >
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> -->
+                                <!-- <div class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-4" style="padding-right: 0 !important;">
+                                            <div class="form-group">
+                                                <input type="number" class="form-control" id="RT_coeff1" onchange=reviseCoefficient() step="0.1" >
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4 text-center" style="padding-left: 0 !important;padding-right: 0 !important;">
+                                            <div class="small"> x Retweets ^</div>
+                                        </div>
+                                        <div class="col-xs-4" style="padding-left: 0 !important;">
+                                            <div class="form-group">
+                                                <input type="number" class="form-control" id="RT_coeff2" onchange=reviseCoefficient() step="0.1" >
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> -->
+                                <!-- <div class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                            Overall Offset:
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <div class="form-group">
+                                                <input type="number" class="form-control" id="offset" onchange=reviseCoefficient() step="500" >
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> -->
+                                              
+                                
+                                <!-- <a href="#" class="list-group-item">
+                                    <i class="fa fa-tasks fa-fw"></i> Last Update
+                                    <span class="pull-right text-muted small"><em>43 minutes ago</em>
+                                    </span>
+                                </a>
+                                
+                                </div>
+                            </div> -->
+                            <!-- /.list-group (weights-menu) -->
+                            <!-- <div class="tab-pane fade in" id="filter-menu">
+                            <div class="list-group" >
+                                <div class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-6" >
+                                            <div class="center-block"> Min Followers: </div>
+                                        </div>
+                                        <div class="col-xs-6" style="padding-left: 0 !important;">
+                                            <div class="form-group">
+                                                <input type="number" class="form-control" id="follower-filter" onchange=reviseFilter()  >
+                                            </div>  
+                                        </div>
+                                    </div>
+                                </div> -->
+                                <!-- <div class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-6" >
+                                            <div class="center-block"> Min Favourites: </div>
+                                        </div>
+                                        <div class="col-xs-6" style="padding-left: 0 !important;">
+                                            <div class="form-group">
+                                                <input type="number" class="form-control" id="favourites-filter" onchange=reviseFilter()  >
+                                            </div>  
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-6" >
+                                            <div class="center-block"> Min Retweets: </div>
+                                        </div>
+                                        <div class="col-xs-6" style="padding-left: 0 !important;">
+                                            <div class="form-group">
+                                                <input type="number" class="form-control" id="retweets-filter" onchange=reviseFilter()  >
+                                            </div>  
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-6" >
+                                            <div class="center-block"> Verified: </div>
+                                        </div>
+                                        <div class="col-xs-6 pull-left" style="padding-left: 0 !important;">
+                                            <div class="form-group">
+                                                
+                                                <input type="checkbox" class="form-control" id="verified-filter" align="left" onchange=reviseFilter()  >
+                                                
+                                            </div> 
+                                        </div>
+                                    </div>
+                                </div> -->
+                                
+                                              
+                                
+                                <!-- <a href="#" class="list-group-item">
+                                    <i class="fa fa-tasks fa-fw"></i> Last Update
+                                    <span class="pull-right text-muted small"><em>43 minutes ago</em>
+                                    </span>
+                                </a>
+                                </div>
+                            </div> -->
+                            <!-- /.list-group (filter-menu) -->
+                            
+                            
+                            
+                            <!-- <a href="#" class="btn btn-default btn-block">View All Alerts</a>
+                        </div> -->
+                        <!-- /.panel-body -->
+                                
+<!--                                     
+                                
+                        </div>
+                            
+                        </div>
+                        
+                
+                        
+                    </div>
+                    
+                </div> -->
+                <!-- /.col-lg-4 -->
+            </div>
+            <!-- /.row -->
+            
+            <!-- <div class="chat-panel panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-comments fa-fw"></i> Recent Trending Tweets
+                            <div class="btn-group pull-right">
+                                <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-chevron-down"></i>
+                                </button>
+                                <ul class="dropdown-menu slidedown">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-refresh fa-fw"></i> Refresh
+                                        </a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-sign-out fa-fw"></i> Sign Out
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div> -->
+                        <!-- /.panel-heading -->
+                        <!-- <div class="panel-body">
+                            <ul class="chat">
+                                <li class="left clearfix">
+                                    <span class="chat-img pull-left">
+                                        <img id="profile_pic1" alt="User Avatar" class="img-circle" width="50px" height="50px"/>
+                                    </span>
+                                    <div class="chat-body clearfix">
+                                        <div class="header">
+                                            <strong class="primary-font" id="user_id1" >Jack Sparrow</strong>
+                                            <small class="pull-right text-muted" >
+                                                <i class="fa fa-clock-o fa-fw" ></i><span id="created_at1">...</span>
+                                            </small>
+                                        </div>
+                                        <p id = "text1">
+                                            ...
+                                        </p>
+                                        <br>
+                                        <table>
+                                            <tr>
+                                                <td width = 100px>
+                                                    <i class="fa fa-retweet fa-fw"></i><span id="retweet1">...</span>
+                                                </td>
+                                                <td width = "100px">
+                                                    <i class="fa fa-heart-o fa-fw"></i><span id="favourite1">...</span>
+                                                </td>
+                                            
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </li>
+                                <li class="left clearfix">
+                                    <span class="chat-img pull-left">
+                                        <img id="profile_pic2" alt="User Avatar" class="img-circle" width="50px" height="50px"/>
+                                    </span>
+                                    <div class="chat-body clearfix">
+                                        <div class="header">
+                                            <strong class="primary-font" id="user_id2" >Jack Sparrow</strong>
+                                            <small class="pull-right text-muted" >
+                                                <i class="fa fa-clock-o fa-fw" ></i><span id="created_at2">...</span>
+                                            </small>
+                                        </div>
+                                        <p id = "text2">
+                                            
+                                        </p>
+                                        <br>
+                                        <table>
+                                            <tr>
+                                                <td width = 100px>
+                                                    <i class="fa fa-retweet fa-fw"></i><span id="retweet2"></span>
+                                                </td>
+                                                <td width = "100px">
+                                                    <i class="fa fa-heart-o fa-fw"></i><span id="favourite2"></span>
+                                                </td>
+                                            
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </li>
+                                <li class="left clearfix">
+                                    <span class="chat-img pull-left">
+                                        <img id="profile_pic3" alt="User Avatar" class="img-circle" width="50px" height="50px"/>
+                                    </span>
+                                    <div class="chat-body clearfix">
+                                        <div class="header">
+                                            <strong class="primary-font" id="user_id3" >Jack Sparrow</strong>
+                                            <small class="pull-right text-muted" >
+                                                <i class="fa fa-clock-o fa-fw" ></i><span id="created_at3">...</span>
+                                            </small>
+                                        </div>
+                                        <p id = "text3">
+                                            
+                                        </p>
+                                        <br>
+                                        <table>
+                                            <tr>
+                                                <td width = 100px>
+                                                    <i class="fa fa-retweet fa-fw"></i><span id="retweet3">...</span>
+                                                </td>
+                                                <td width = "100px">
+                                                    <i class="fa fa-heart-o fa-fw"></i><span id="favourite3">...</span>
+                                                </td>
+                                            
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </li>
+                                <li class="left clearfix">
+                                    <span class="chat-img pull-left">
+                                        <img id="profile_pic4" alt="User Avatar" class="img-circle" width="50px" height="50px"/>
+                                    </span>
+                                    <div class="chat-body clearfix">
+                                        <div class="header">
+                                            <strong class="primary-font" id="user_id4" >Jack Sparrow</strong>
+                                            <small class="pull-right text-muted" >
+                                                <i class="fa fa-clock-o fa-fw" ></i><span id="created_at4">...</span>
+                                            </small>
+                                        </div>
+                                        <p id = "text4">
+                                            
+                                        </p>
+                                        <br>
+                                        <table>
+                                            <tr>
+                                                <td width = 100px>
+                                                    <i class="fa fa-retweet fa-fw"></i><span id="retweet4">...</span>
+                                                </td>
+                                                <td width = "100px">
+                                                    <i class="fa fa-heart-o fa-fw"></i><span id="favourite4">...</span>
+                                                </td>
+                                            
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </li>
+                                <li class="left clearfix">
+                                    <span class="chat-img pull-left">
+                                        <img id="profile_pic5" alt="User Avatar" class="img-circle" width="50px" height="50px"/>
+                                    </span>
+                                    <div class="chat-body clearfix">
+                                        <div class="header">
+                                            <strong class="primary-font" id="user_id5" >Jack Sparrow</strong>
+                                            <small class="pull-right text-muted" >
+                                                <i class="fa fa-clock-o fa-fw" ></i><span id="created_at5">...</span>
+                                            </small>
+                                        </div>
+                                        <p id = "text5">
+                                            
+                                        </p>
+                                        <br>
+                                        <table>
+                                            <tr>
+                                                <td width = 100px>
+                                                    <i class="fa fa-retweet fa-fw"></i><span id="retweet5">...</span>
+                                                </td>
+                                                <td width = "100px">
+                                                    <i class="fa fa-heart-o fa-fw"></i><span id="favourite5">...</span>
+                                                </td>
+                                            
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </li>
+                                
+                            </ul>
+                        </div> -->
+                        <!-- /.panel-body -->
+                        
+                        <!-- /.panel-footer -->
+                    <!-- </div> -->
+                    <!-- /.panel .chat-panel -->
+                <!-- </div> -->
+            
+            
+            
+        </div>
+        <!-- /#page-wrapper -->
+
+    
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="./bootstrap.min.js"></script>
+    
+    <!-- Custom Theme JavaScript -->
+    <script src="./sb-admin-2.js"></script>
+
+    <!-- Chart Includes -->
+    <script src="assets/js/moment.js"></script>
+    <script src="assets/js/Chart.min.js"></script>
+    <script src="popup.js"></script>
+    <script src="popup2.js"></script>    
+    
+    
+
+
+</body>
+
+</html>
