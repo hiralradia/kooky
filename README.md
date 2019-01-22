@@ -1,4 +1,4 @@
-## Kooky allows you to reclaim control of your online privacy.
+**Kooky allows you to reclaim control of your online privacy.**
 
 ## Why Kooky?
 
