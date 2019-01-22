@@ -1,4 +1,4 @@
-**Kooky allows you to reclaim control of your online privacy.**
+![alt text](https://raw.githubusercontent.com/hiralradia/kooky/master/kookyicon.png)
 
 ## Why Kooky?
 
