@@ -26,4 +26,4 @@ An implementation of an 'IP-scrambler' in order to alter your IP address through
 
 
 <img align="left" width=50% src="https://raw.githubusercontent.com/hiralradia/kooky/master/screen1.png">
-<img align="right" width="150" src="https://raw.githubusercontent.com/hiralradia/kooky/master/screen2.png">
+<img align="right" width=50% src="https://raw.githubusercontent.com/hiralradia/kooky/master/screen2.png">
