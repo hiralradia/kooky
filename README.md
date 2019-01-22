@@ -2,7 +2,7 @@
 
 __Kooky allows you to reclaim control of your online privacy.__ <img align="right" width="150" src="https://raw.githubusercontent.com/hiralradia/kooky/master/kookyicon.png">
 
-Kooky was a project from Hack Cambridge 4D from 2019 created by Jack Neill, Choon Kiat (choonkiatlee) and William Halfpenny and myself. It won the prize for the Avast security challenge.
+Kooky was a project from Hack Cambridge 4D from 2019 created by Jack Neill, Choon Kiat (choonkiatlee), William Halfpenny and myself. It won the prize for the Avast security challenge.
 
 ## Why Kooky?
 
