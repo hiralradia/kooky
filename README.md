@@ -1,6 +1,8 @@
-## Kooky <img align="right" width="100" src="https://raw.githubusercontent.com/hiralradia/kooky/master/kookyicon.png">
+## Kooky 
 
-__Kooky allows you to reclaim control of your online privacy.__
+__Kooky allows you to reclaim control of your online privacy.__ <img align="right" width="100" src="https://raw.githubusercontent.com/hiralradia/kooky/master/kookyicon.png">
+
+Kooky was a project from Hack Cambridge 4D from 2019 created by Jack Neill, Choon Kiat (choonkiatlee) and William Halfpenny and myself. It won the prize for the Avast security challenge.
 
 ## Why Kooky?
 
@@ -8,7 +10,7 @@ In a time when many companies are gathering more and more data everyday, Kooky p
 
 ## What we do
 
-Kooky is a powerful browser extension, designed to provide real time data on the sites following you. We turn the tables on the websites tracking you by allowing you to view _their_ information. By using our browser extension, you can choose which cookies you keep to allow websites to function as normal, or you can use our 'Ultimate Protection Mode' to maximise your anonymity.
+Kooky is a powerful browser extension, designed to provide real time data on the sites following you. We turn the tables on the websites tracking you by allowing you to view _their_ information. By using our browser extension, you can choose which cookies you keep to allow websites to function as normal, or you can use our 'Ultimate Protection Mode' to maximise your anonymity by displaying a new browser fingerprint every time the .
 
 ## How we built it
 
