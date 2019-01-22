@@ -1,5 +1,7 @@
 ## Kooky <img align="right" width="100" src="https://raw.githubusercontent.com/hiralradia/kooky/master/kookyicon.png">
 
+__Kooky allows you to reclaim control of your online privacy.__
+
 ## Why Kooky?
 
 In a time when many companies are gathering more and more data everyday, Kooky puts you back in control of your online privacy. By using smarter techniques to make it impossible to track your browsing habits, Kooky always has your back.
